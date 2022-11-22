@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\About_Us;
 use App\category;
 use App\Http\Requests\CategoryRequest;
 use App\Http\Requests\ProductRequest;
@@ -51,8 +52,14 @@ class categoryController extends Controller
         $categoryinfo=category::find($id);
         return view('category.show' ,compact('categoryinfo'));
     }
-// function add_product with category id
 
+// function add_product with category id
+    public function show_product($id)
+    {
+        $about=About_Us::all();
+        $categoryinfo=category::find($id);
+        return view('website.show' ,compact('categoryinfo','about'));
+    }
     public function add_product(ProductRequest $request , $category_id)
     {
         $data=$request->all();

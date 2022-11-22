@@ -6,10 +6,24 @@
             <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" class="nav-link">home</a>
+            <a href="{{url('/')}}" class="nav-link uppercase">Book Store</a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{url('logout')}}" class="nav-link">logout</a>
+        <li class="nav-item dropdown">
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }}
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            </div>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="{{url('contact')}}" class="nav-link">Contact</a>

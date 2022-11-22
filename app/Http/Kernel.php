@@ -37,7 +37,10 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
-
+        'admin'=>[
+            \App\Http\Middleware\Authenticate::class,
+            \App\Http\Middleware\Admin::class,
+        ],
         'api' => [
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
@@ -53,6 +56,8 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
+        'admin' => \App\Http\Middleware\Admin::class,
+        'Lang' => \App\Http\Middleware\Lang::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,

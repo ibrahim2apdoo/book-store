@@ -32,9 +32,11 @@ Route::delete('contact/{id}','ContactController@destroy');
 
 Route::get('/','HomeController@home');
 Route::get('/about_us','HomeController@about_us');
+Route::get('/show_product/{id}','categoryController@show_product');
+
+Route::group(['middleware',['admin','web']],function (){
+    Route::get('/adminpanel', 'AdminController@index');
+});
+Route::get('lang/{lang}','LangController@lang');
 
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

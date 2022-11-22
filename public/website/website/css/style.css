@@ -1,11 +1,6 @@
-body
-{
-	height: 1000px;
-
+body{
+    height:100%;
 }
-
-
-
 .scrolled
 {
 	background-color: rgba(0,0,0,0.8);
@@ -559,10 +554,11 @@ margin-top: 35px;
 
 .footer
 {
+    clear: both;
+    position: relative;
 	background-color:  #000;
 	color: #eee;
-	padding: 20px;
-	font-size: 18px;
+
 }
 .footer span{
 	color: #17F3FC;

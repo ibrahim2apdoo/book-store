@@ -37,6 +37,7 @@
                     <ul class="list-unstyled confgration" >
                         <li style="height: 180px;">{{$categoryDesc->category_description}}</li>
                     </ul>
+                    <h4> <a class="lead uppercase" href="show_product/{{$categoryDesc->id}}">{{$categoryDesc->category_name}} </a></h4>
                 </div>
             </div>
         @endforeach
