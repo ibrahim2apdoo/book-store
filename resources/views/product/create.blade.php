@@ -5,7 +5,7 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">{{$title}}</h3>
+            <h3 class="box-title" style="text-align: center">{{$title}}</h3>
         </div>
         <div class="box-body ">
             {!! Form::open(['url'=>url('product'),'files'=>true]) !!}
@@ -38,7 +38,7 @@
             <div class="form-group">
                 {!! Form::label('category name')!!}
                 <select class="selectpicker form-control" name="category_id" id="number" data-live-search="true">
-                    <option>Select category</option>
+                    <option value="disabled selected hidden">Select category</option>
                     @foreach($category as $categoryinfo)
                         <option value="{{$categoryinfo->id}}">{{$categoryinfo->category_name}}</option>
                     @endforeach

@@ -5,7 +5,7 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">{{$title}}</h3>
+            <h3 class="box-title" style="text-align: center">{{$title}}</h3>
         </div>
         <div class="box-body ">
             <!-- 'route'=>['admin.update',$admin->id] function or url aurl('admin/'.$admin->id) this header for store function  -->
@@ -42,7 +42,7 @@
             <div class="form-group">
                 {!! Form::label('category name')!!}
                 <select class="selectpicker form-control" name="category_id" id="number" data-live-search="true">
-                    <option>Select category</option>
+                    <option value="{{$product->products->id}}">{{$product->products->category_name}}</option>
                     @foreach($category as $categoryinfo)
                         <option value="{{$categoryinfo->id}}">{{$categoryinfo->category_name}}</option>
                     @endforeach
@@ -51,7 +51,6 @@
         </div>
         {!! Form::submit('Edit',['class'=>'btn btn-primary form-control']) !!}
         {!! Form::close() !!}
-        <!-- route admin.store function or url aurl('admin') this header for store function  -->
         <!-- /.card-body -->
         <!-- /.card -->
     </div>

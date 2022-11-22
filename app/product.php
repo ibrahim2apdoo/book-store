@@ -4,6 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method static find($id)
+ * @method static where(string $string, $id)
+ * @method static create(array $data)
+ * @method static orderBy(string $string, string $string1)
+ */
 class product extends Model
 {
 

@@ -36,8 +36,8 @@
                                     </td>
                                     <td>{{$productinfo->product_name}}</td>
                                     <td>
-                                    @if(!empty($productinfo->product_name))
-                                        <img src="{{Storage::url($productinfo->product_name)}}" style="width: 100px;height: 100px;">
+                                    @if(!empty($productinfo->product_image))
+                                        <img src="{{Storage::url($productinfo->product_image)}}" style="width: 100px;height: 100px;">
                                     @endif
                                     </td>
                                     <td>{{$productinfo->product_description}}</td>

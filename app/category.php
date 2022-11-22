@@ -4,6 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method static orderBy(string $string, string $string1)
+ * @method static create(array $data)
+ * @method static find($id)
+ * @method static where(string $string, $id)
+ */
 class category extends Model
 {
     protected $table='categories';

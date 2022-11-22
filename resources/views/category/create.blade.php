@@ -5,7 +5,7 @@
 
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">{{$title}}</h3>
+                <h3 class="box-title" style="text-align: center">{{$title}}</h3>
             </div>
             <div class="box-body ">
                 {!! Form::open(['url'=>url('category'),'files'=>true]) !!}

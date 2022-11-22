@@ -40,4 +40,7 @@ class User extends Authenticatable
     public function categories(){
         return $this->hasMany('App\category','category_id','id');
     }
+    public function contacts(){
+        return $this->hasMany('App\Contact','contact_id','id');
+    }
 }
