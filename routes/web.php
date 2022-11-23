@@ -15,28 +15,38 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('category','categoryController');
-Route::resource('product','productController');
-
-Route::post('add_product/{category_id}','categoryController@add_product');
-
-Route::get( 'contact','ContactController@index');
-Route::post('contact','ContactController@create')->name('contact.create');
+Route::get('/home', 'HomeController@index')->name('index');
 
 
-Route::get('contact/showindex','ContactController@showindex')->name('contact.showindex');
-Route::delete('contact/{id}','ContactController@destroy');
+//
+Route::get( 'contact','ContactController@index')->middleware('auth');
+Route::post('contact','ContactController@create')->middleware('auth');
 
 
-Route::get('/','HomeController@home');
-Route::get('/about_us','HomeController@about_us');
-Route::get('/show_product/{id}','categoryController@show_product');
 
-Route::group(['middleware',['admin','web']],function (){
-    Route::get('/adminpanel', 'AdminController@index');
-});
+
+
+Route::get('/','HomeController@index');
+Route::get('/about_us','HomeController@about_us')->middleware('auth');
+Route::get('/show_product/{id}','categoryController@show_product')->middleware('auth');
+
+Route::middleware(['admin', 'web'])->group(function () {
+        Route::get('/adminpanel', 'AdminController@index');
+        Route::get('/users', 'AdminController@getUser')->name('users');
+        Route::get('users/{id}/edit', 'AdminController@edit');
+        Route::put('users/{id}', 'AdminController@update');
+        Route::delete('users/{id}', 'AdminController@destroy');
+        Route::get('/users/create', 'AdminController@create')->name('users.create');
+        Route::post('/users/create', 'AdminController@store')->name('users.store');
+        //contact route admin
+        Route::get('contact/showindex','ContactController@showindex')->name('contact.showindex');
+        Route::delete('contact/{id}','ContactController@destroy');
+    //category route
+        Route::resource('category','categoryController');
+    //category product
+        Route::resource('product','productController');
+
+        Route::post('add_product/{category_id}','categoryController@add_product');
+    });
 Route::get('lang/{lang}','LangController@lang');
-
 

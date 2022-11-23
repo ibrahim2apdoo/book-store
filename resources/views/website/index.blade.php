@@ -31,7 +31,7 @@
                     <h2 class="plan-head "> {{$categoryDesc->category_name}}</h2>
                     <div class="option-price" style="width: 359px;height: 359px">
                   <span class="price" style="width: 100% ; height: 100%">
-                      <img src="{{Storage::url($categoryDesc->category_image)}}" style="width: 100%; height: 100%">
+                      <img src="{{asset('storage/public/'.$categoryDesc->category_image)}}" style="width: 100%; height: 100%">
                   </span>
                     </div>
                     <ul class="list-unstyled confgration" >

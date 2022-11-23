@@ -20,14 +20,8 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{url('/')}}/design/adminlte/plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
-    @if(direction()=='ltr')
         <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/adminlte.min.css">
-    @else
-        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/AdminLTE.css">
-        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/AdminLTE.min.css">
-        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/bootstrap-rtl.min.css">
-        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/rtl.css">
-    @endif
+
         <!-- overlayScrollbars -->
 
 

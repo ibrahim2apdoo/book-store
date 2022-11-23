@@ -1,7 +1,9 @@
 <?php
 return [
   'login'=>'Login',
+  'role'=>'Level',
   'admin'=>'Admin Account',
+  'admins'=>'admin',
   'users'=>'User Account',
   'user_add'=>'Add New User',
   'dashboard'=>'Dashboard',

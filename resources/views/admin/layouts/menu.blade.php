@@ -3,51 +3,96 @@
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
-        <li class="nav-item has-treeview {{active_menu('admin')[0]}}">
-            <a href="{{url('')}}" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                    {{trans('admin.dashboard')}}
-                    <i class="right fas fa-angle-left"></i>
-                </p>
-            </a>
-            <ul class="nav nav-treeview" {{active_menu('admin')[1]}}>
-                <li class="nav-item">
-                    <a href="./index.html" class="nav-link ">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>{{trans('admin.dashboard')}}</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{url('settings')}}" class="nav-link ">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>{{trans('admin.settings')}}</p>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-item has-treeview {{active_menu('users')[0]}}">
-            <a href="#" class="nav-link active">
+        <li class="nav-item has-treeview" {{request()->routeIs('users.*') ? 'menu-open' : ''}}>
+            <a href="{{route('users')}}" class="nav-link active"  {{request()->routeIs('users.*') ? 'active' : ''}} >
                 <i class="nav-icon fas fa-users"></i>
                 <p>
                     {{trans('admin.users')}}
                     <i class="right fas fa-angle-left"></i>
                 </p>
             </a>
-            <ul class="nav nav-treeview {{active_menu('users')[1]}}">
+            <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{url('users')}}" class="nav-link">
+                    <a href="{{route('users')}}" class="nav-link" {{request()->routeIs('users') ? 'active' : ''}}>
                         <i class="fas fa-users nav-icon"></i>
                         {{trans('admin.users')}}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url('users/create')}}" class="nav-link">
+                    <a href="{{route('users.create')}}" class="nav-link" {{request()->routeIs('users.create') ? 'active' : ''}}>
                         <i class="fas fa-plus nav-icon"></i>
                         {{trans('admin.user_add')}}
                     </a>
                 </li>
             </ul>
+        </li>
+        <li class="nav-item has-treeview {{request()->routeIs('category.*') ? 'menu-open' : ''}}">
+            <a href="{{url('')}}" class="nav-link {{request()->routeIs('category.*') ? 'active' : ''}}">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                    Category
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('category.index')}}" class="nav-link {{request()->routeIs('category.index') ? 'active' : ''}}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Category</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url('category/create')}}" class="nav-link {{request()->routeIs('category.create') ? 'active' : ''}}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Add New Category</p>
+                    </a>
+                </li>
+
+            </ul>
+
+        </li>
+        <li class="nav-item has-treeview  {{request()->routeIs('product.*') ? 'menu-open' : ''}}">
+            <a href="{{url('')}}" class="nav-link {{request()->routeIs('product.*') ? 'active' : ''}}">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                    Product
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('product.index')}}" class="nav-link  {{request()->routeIs('product.index') ? 'active' : ''}}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Product</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('product.create')}}" class="nav-link  {{request()->routeIs('product.create') ? 'active' : ''}}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Add New Product</p>
+                    </a>
+                </li>
+
+            </ul>
+
+        </li>
+        <li class="nav-item has-treeview  {{request()->routeIs('contact.*') ? 'menu-open' : ''}}">
+            <a href="{{url('')}}" class="nav-link {{request()->routeIs('contact.*') ? 'active' : ''}}">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                    Massages
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('contact.showindex')}}" class="nav-link  {{request()->routeIs('contact.showindex') ? 'active' : ''}}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Massages</p>
+                    </a>
+                </li>
+            </ul>
+
         </li>
 
     </ul>

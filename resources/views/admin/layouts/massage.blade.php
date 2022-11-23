@@ -16,10 +16,3 @@
         </h2>
     </div>
     @endif
-@if(session()->has('error'))
-    <div class="alert alert-danger">
-        <h2>
-            {{session('error')}}
-        </h2>
-    </div>
-    @endif

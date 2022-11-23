@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Config;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;;
 use Illuminate\Support\Facades\Route;
+use Config;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -59,7 +59,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        Config::set('filesystems.disks.public.url',url('storage'));
+     //   Config::set('filesystems.disks.public.url',url('storage'));
         Route::middleware(['web','Lang'])
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));

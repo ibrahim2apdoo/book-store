@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img class="img-responsive center-block sub-img" src="{{Storage::url($about->first()->sitImage)}}">
+                <img class="img-responsive center-block sub-img" src="{{asset('storage/public/'.$about->first()->sitImage)}}">
             </div>
         </div>
     </div>

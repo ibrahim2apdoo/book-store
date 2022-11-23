@@ -13,7 +13,7 @@ class Lang
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle( $request, Closure $next)
     {
         if (session()->has('lang')){
             app()->setLocale(session('lang'));

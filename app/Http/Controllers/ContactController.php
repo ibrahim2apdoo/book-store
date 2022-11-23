@@ -37,7 +37,7 @@ class ContactController extends Controller
 
     public function showindex(){
         $contact=Contact::all();
-        return view('contact.index',compact('contact'));
+        return view('admin.contact.index',compact('contact'));
     }
     public function destroy($id){
         $contact=Contact::find($id);

@@ -15,7 +15,7 @@
                                 <td>{{$categoryinfo->category_description}}</td>
                                 <td>
                                     @if(!empty($categoryinfo->category_image))
-                                        <img src="{{Storage::url($categoryinfo->category_image)}}" style="width: 100px;height: 100px;">
+                                        <img src="{{asset('storage/public/'.$categoryinfo->category_image)}}" style="width: 100px;height: 100px;">
                                     @endif
                                 </td>
                             </tr>
@@ -50,7 +50,7 @@
                                     <td>{{$productinfo->product_name}}</td>
                                     <td>
                                         @if(!empty($productinfo->product_image))
-                                            <img src="{{Storage::url($productinfo->product_image)}}" style="width: 100px;height: 100px;">
+                                            <img src="{{asset('storage/public/'.$productinfo->product_image)}}" style="width: 100px;height: 100px;">
                                         @endif
                                     </td>
                                     <td>{{$productinfo->product_description}}</td>

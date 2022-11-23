@@ -17,14 +17,14 @@ class categoryController extends Controller
     public function index()
     {
         $category=category::all();
-        return view('category.index',compact('category'));
+        return view('admin.category.index',compact('category'));
     }
 
 
     public function create()
     {
         $title='Add New Category';
-        return view('category.create',compact('title'));
+        return view('admin.category.create',compact('title'));
     }
 
 
@@ -50,10 +50,9 @@ class categoryController extends Controller
     public function show($id)
     {
         $categoryinfo=category::find($id);
-        return view('category.show' ,compact('categoryinfo'));
+        return view('admin.category.show' ,compact('categoryinfo'));
     }
 
-// function add_product with category id
     public function show_product($id)
     {
         $about=About_Us::all();
@@ -84,7 +83,7 @@ class categoryController extends Controller
     {
         $category=category::find($id);
         $title='Edit Category';
-        return view('category.edit',compact('category','title'));
+        return view('admin.category.edit',compact('category','title'));
     }
 
     /*

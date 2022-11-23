@@ -15,7 +15,7 @@ class productController extends Controller
     public function index()
     {
         $product=product::all();
-        return view('product.index',compact('product'));
+        return view('admin.product.index',compact('product'));
     }
 
 
@@ -23,7 +23,7 @@ class productController extends Controller
     {
         $title='Add New product';
         $category=category::all();
-        return view('product.create',compact('category','title'));
+        return view('admin.product.create',compact('category','title'));
     }
 
 
@@ -44,7 +44,7 @@ class productController extends Controller
                 session()->flash('success', 'product Added successful');
                 return redirect(url('product'));
         }
-        else return view('product.noProduct');
+        else return view('admin.product.noProduct');
     }
 
 
@@ -53,7 +53,7 @@ class productController extends Controller
         $product=product::find($id);
         $category=category::all();
         $title='Edit product';
-        return view('product.edit',compact('product','category','title'));
+        return view('admin.product.edit',compact('product','category','title'));
     }
 
     /**
