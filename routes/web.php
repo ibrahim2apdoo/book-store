@@ -48,5 +48,3 @@ Route::middleware(['admin', 'web'])->group(function () {
 
         Route::post('add_product/{category_id}','categoryController@add_product');
     });
-Route::get('lang/{lang}','LangController@lang');
-

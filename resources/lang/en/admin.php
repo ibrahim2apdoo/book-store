@@ -66,4 +66,10 @@ return [
     'mob'=>'curancy',
     'code'=>'Code',
     'country_logo'=>'Country Logo',
+    'about_us'=>'About Us',
+    'category'=>'Category',
+    'category_add'=>'Add New Category',
+    'product'=>'Product',
+    'product_add'=>'Add New Product',
+    'massage'=>'Massage',
 ];
