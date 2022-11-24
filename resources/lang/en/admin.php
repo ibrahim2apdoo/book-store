@@ -68,11 +68,14 @@ return [
     'country_logo'=>'Country Logo',
     'about_us'=>'About Us',
     'category'=>'Category',
+
     'categories'=>'Categories',
+
     'category_add'=>'Add New Category',
     'product'=>'Product',
     'product_add'=>'Add New Product',
     'massage'=>'Massage',
+
     'category_name'=>'Name',
     'category_description'=>'Description',
     'added_by'=>'Added By',
@@ -95,5 +98,6 @@ return [
     'Enter_Your_Name'=>'Enter Your Name',
     'send'=>'Send',
     'products'=>'Products',
+
 
 ];

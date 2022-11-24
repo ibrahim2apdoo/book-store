@@ -61,7 +61,9 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
      //   Config::set('filesystems.disks.public.url',url('storage'));
-        Route::middleware(['web', 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ])->prefix(LaravelLocalization::setLocale())
+
+        Route::middleware(['web','localeSessionRedirect', 'localizationRedirect', 'localeViewPath'])->prefix (LaravelLocalization::setLocale())
+
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
     }

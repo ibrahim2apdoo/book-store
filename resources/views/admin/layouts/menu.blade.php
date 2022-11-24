@@ -38,7 +38,11 @@
                 <li class="nav-item">
                     <a href="{{route('category.index')}}" class="nav-link {{request()->routeIs('category.index') ? 'active' : ''}}">
                         <i class="far fa-circle nav-icon"></i>
+
                         <p>{{trans('admin.categories')}}</p>
+
+                        <p>{{trans('admin.category')}}</p>
+
                     </a>
                 </li>
                 <li class="nav-item">
@@ -56,6 +60,8 @@
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
 
+
+
                     {{trans('admin.product')}}
                     <i class="right fas fa-angle-left"></i>
                 </p>
@@ -64,7 +70,11 @@
                 <li class="nav-item">
                     <a href="{{route('product.index')}}" class="nav-link  {{request()->routeIs('product.index') ? 'active' : ''}}">
                         <i class="far fa-circle nav-icon"></i>
+
                         <p>{{trans('admin.products')}}</p>
+
+                        <p>{{trans('admin.product')}}</p>
+
                     </a>
                 </li>
                 <li class="nav-item">
