@@ -15,5 +15,7 @@ class About_Us extends Model
                  'facebook',
                  'tweeter',
                  'linkin',
+
+
    ];
 }

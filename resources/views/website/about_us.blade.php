@@ -9,15 +9,26 @@
                         {{$about->first()->sitDescription}}
                     </p>
                 </div>
-                <div class="social-auth-links" style="margin-top: 100px;float: left;">
-                        <a href="{{$about->first()->facebook}}"> <i class="fa fa-facebook fa-3x fa-fw"></i></a>
-                        <a href="{{$about->first()->tweeter}}">  <i class="fa fa-twitter fa-3x fa-fw" ></i></a>
-                        <a href="{{$about->first()->linkin}}">   <i class="fa fa-linkedin fa-3x fa-fw"></i></a>
-                </div>
-                <div class="social-auth-links" style="margin-top: 100px;float: right;">
-                        <a href="{{$about->first()->facebook}}"> <i class="fa fa-facebook fa-3x fa-fw"></i></a>
-                        <a href="{{$about->first()->tweeter}}">  <i class="fa fa-twitter fa-3x fa-fw" ></i></a>
-                        <a href="{{$about->first()->linkin}}">   <i class="fa fa-linkedin fa-3x fa-fw"></i></a>
+                <div class="social-auth-links">
+                    <div class="col-lg-6 ">
+                            <h4> {{trans('admin.ourOffice')}} </h4>
+                            <p>{{$about->first()->siteName}}</p>
+                        <br>
+                                <i class="fa fa-map-marker fa-2x" ></i>
+                        <br>
+                                <hp>{{$about->first()->address}}</hp>
+
+                    </div>
+                    <div class="col-md-6">
+                        <i class=" mt-4 fa-2x fa fa-mobile-phone" ></i>
+                        <br>
+                        <p>{{$about->first()->phone}}</p>
+                        <br>
+                        <i class=" fa fa-envelope mt-4 fa-2x"></i>
+                        <br>
+                        <hp>{{$about->first()->email}}</hp>
+
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">

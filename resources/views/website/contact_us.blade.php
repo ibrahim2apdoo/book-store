@@ -6,7 +6,7 @@
         @include('layouts.massage')
         <h2 class="contact-hesd text-center h1 head-border-center uppercase">{{trans('admin.Contact')}} </h2>
         <div class="row">
-            <div class="col-md-12 mb-md-0 mb-5">
+            <div class="col-md-9 mb-md-0 mb-5">
                 {!! Form::open(['url'=>'/contact' , 'method'=>'post']) !!}
                     <div class="col-md-6">
                         <div class="md-form mb-0">
@@ -32,6 +32,26 @@
                     {!! Form::submit(trans('admin.send'),['class'=>'contact-btn' ]) !!}
                 </div>
                 {!! Form::close() !!}
+            </div>
+            <div class="col-md-3 text-center">
+                <ul class="list-unstyled mb-0">
+                    <h1>{{trans('admin.ourOffice')}} </h1>
+                    <h4>{{$about->first()->siteName}}</h4>
+
+                    <hr>
+
+                    <li  ><i class="fa fa-map-marker fa-2x" ></i>
+                        <h4>{{$about->first()->address}}</h4>
+                    </li>
+                    <hr>
+                    <li ><i class=" mt-4 fa-2x fa fa-mobile-phone" ></i>
+                        <h4>{{$about->first()->phone}}</h4>
+                    </li>
+                    <hr>
+                    <li ><i class=" fa fa-envelope mt-4 fa-2x"></i>
+                        <h4>{{$about->first()->email}}</h4>
+                    </li>
+                </ul>
             </div>
         </div>
 

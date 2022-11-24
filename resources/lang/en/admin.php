@@ -98,6 +98,7 @@ return [
     'Enter_Your_Name'=>'Enter Your Name',
     'send'=>'Send',
     'products'=>'Products',
+    'ourOffice'=>'Our Office',
 
 
 ];

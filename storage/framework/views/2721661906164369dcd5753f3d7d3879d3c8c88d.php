@@ -46,37 +46,6 @@
                 <li><a href="<?php echo e(url('/home')); ?>"><?php echo e(trans('admin.home')); ?></a></li>
                 <li><a href="<?php echo e(url('about_us')); ?>"><?php echo e(trans('admin.about_us')); ?></a></li>
                 <li><a href="<?php echo e(url('contact')); ?>"><?php echo e(trans('admin.Contact')); ?></a></li>
-
-                <li><a href="<?php echo e(url('/home')); ?>"><?php echo e(trans('admin.home')); ?></a></li>
-                <li><a href="<?php echo e(url('about_us')); ?>"><?php echo e(trans('admin.about_us')); ?></a></li>
-                <li><a href="<?php echo e(url('contact')); ?>"><?php echo e(trans('admin.Contact')); ?></a></li>
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <?php echo e(LaravelLocalization::getCurrentLocaleNative()); ?>
-
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <div class="dropdown-divider"></div>
-                        <?php $__currentLoopData = LaravelLocalization::getSupportedLocales(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $localeCode => $properties): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <a class="dropdown-item" rel="alternate" hreflang="<?php echo e($localeCode); ?>" href="<?php echo e(LaravelLocalization::getLocalizedURL($localeCode, null, [], true)); ?>">
-                                <!-- Message Start -->
-                                <div class="media">
-                                    <div class="media-body">
-                                        <h3 class="dropdown-item-title">
-                                            <i class="fa fa-flag"></i>
-                                            <?php echo e($properties['native']); ?>
-
-                                        </h3>
-
-                                    </div>
-                                </div>
-                                <!-- Message End -->
-                            </a>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </div>
-
-                </li>
-
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         <?php echo e(Auth::user()->name); ?>

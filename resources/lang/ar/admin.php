@@ -92,6 +92,7 @@ return [
     'Enter_Your_Subject'=>'مضمون رسالتك عن',
     'Enter_Your_Name'=>'ادخل اسمك ',
     'products'=>'المنتجات',
+    'ourOffice'=>'مكتبنا ',
 
 
 

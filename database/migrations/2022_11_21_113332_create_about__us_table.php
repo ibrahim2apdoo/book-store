@@ -21,6 +21,9 @@ class CreateAboutUsTable extends Migration
             $table->string('facebook');
             $table->string('tweeter');
             $table->string('linkin');
+            $table->integer('phone');
+            $table->string('email');
+            $table->string('address');
             $table->timestamps();
         });
     }
