@@ -15,13 +15,14 @@ class productController extends Controller
     public function index()
     {
         $product=product::all();
-        return view('admin.product.index',compact('product'));
+        $title=trans('admin.products');
+        return view('admin.product.index',compact('product','title'));
     }
 
 
     public function create()
     {
-        $title='Add New product';
+        $title=trans('admin.product_add');
         $category=category::all();
         return view('admin.product.create',compact('category','title'));
     }

@@ -17,13 +17,14 @@ class categoryController extends Controller
     public function index()
     {
         $category=category::all();
-        return view('admin.category.index',compact('category'));
+        $title=trans('admin.categories');
+        return view('admin.category.index',compact('category','title'));
     }
 
 
     public function create()
     {
-        $title='Add New Category';
+        $title=trans('admin.category_add');
         return view('admin.category.create',compact('title'));
     }
 

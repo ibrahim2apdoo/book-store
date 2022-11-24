@@ -12,14 +12,14 @@
                             <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>delete </th>
-                                <th>edit </th>
-                                <th>name </th>
-                                <th>image </th>
-                                <th>description </th>
-                                <th>price </th>
-                                <th>quantity </th>
-                                <th>category name </th>
+                                <th> {{trans('admin.delete')}} </th>
+                                <th> {{trans('admin.edit')}} </th>
+                                <th> {{trans('admin.category_name')}} </th>
+                                <th>{{trans('admin.category_image')}}</th>
+                                <th>{{trans('admin.category_description')}}</th>
+                                <th>{{trans('admin.price')}} </th>
+                                <th>{{trans('admin.quantity')}} </th>
+                                <th>{{trans('admin.category_name_of_product')}} </th>
 
                             </tr>
                             </thead>
@@ -28,7 +28,7 @@
                                 <tr>
                                     <td>
                                         {!! Form::open(['id'=>'form_delete','url'=>url('product/'.$productinfo->id),'method'=>'delete']) !!}
-                                        {!! Form::submit('delete',['class'=>'btn btn-danger fa fa-trash' ,'style'=>'inline']) !!}
+                                        {!! Form::submit(trans('admin.delete'),['class'=>'btn btn-danger fa fa-trash' ,'style'=>'inline']) !!}
                                         {!! Form::close() !!}
                                     </td>
                                     <td>
@@ -49,14 +49,14 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>delete </th>
-                                <th>edit </th>
-                                <th>name </th>
-                                <th>image </th>
-                                <th>description </th>
-                                <th>price </th>
-                                <th>quantity </th>
-                                <th>category name </th>
+                                <th> {{trans('admin.delete')}} </th>
+                                <th> {{trans('admin.edit')}} </th>
+                                <th> {{trans('admin.product_name')}} </th>
+                                <th>{{trans('admin.product_image')}}</th>
+                                <th>{{trans('admin.product_description')}}</th>
+                                <th>{{trans('admin.price')}} </th>
+                                <th>{{trans('admin.quantity')}} </th>
+                                <th>{{trans('admin.category_name_of_product')}} </th>
                             </tr>
                             </tfoot>
                         </table>

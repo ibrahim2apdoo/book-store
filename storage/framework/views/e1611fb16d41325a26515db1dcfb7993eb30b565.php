@@ -10,14 +10,14 @@
                             <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>delete </th>
-                                <th>edit </th>
-                                <th>name </th>
-                                <th>image </th>
-                                <th>description </th>
-                                <th>price </th>
-                                <th>quantity </th>
-                                <th>category name </th>
+                                <th> <?php echo e(trans('admin.delete')); ?> </th>
+                                <th> <?php echo e(trans('admin.edit')); ?> </th>
+                                <th> <?php echo e(trans('admin.category_name')); ?> </th>
+                                <th><?php echo e(trans('admin.category_image')); ?></th>
+                                <th><?php echo e(trans('admin.category_description')); ?></th>
+                                <th><?php echo e(trans('admin.price')); ?> </th>
+                                <th><?php echo e(trans('admin.quantity')); ?> </th>
+                                <th><?php echo e(trans('admin.category_name_of_product')); ?> </th>
 
                             </tr>
                             </thead>
@@ -27,7 +27,7 @@
                                     <td>
                                         <?php echo Form::open(['id'=>'form_delete','url'=>url('product/'.$productinfo->id),'method'=>'delete']); ?>
 
-                                        <?php echo Form::submit('delete',['class'=>'btn btn-danger fa fa-trash' ,'style'=>'inline']); ?>
+                                        <?php echo Form::submit(trans('admin.delete'),['class'=>'btn btn-danger fa fa-trash' ,'style'=>'inline']); ?>
 
                                         <?php echo Form::close(); ?>
 
@@ -50,14 +50,14 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>delete </th>
-                                <th>edit </th>
-                                <th>name </th>
-                                <th>image </th>
-                                <th>description </th>
-                                <th>price </th>
-                                <th>quantity </th>
-                                <th>category name </th>
+                                <th> <?php echo e(trans('admin.delete')); ?> </th>
+                                <th> <?php echo e(trans('admin.edit')); ?> </th>
+                                <th> <?php echo e(trans('admin.product_name')); ?> </th>
+                                <th><?php echo e(trans('admin.product_image')); ?></th>
+                                <th><?php echo e(trans('admin.product_description')); ?></th>
+                                <th><?php echo e(trans('admin.price')); ?> </th>
+                                <th><?php echo e(trans('admin.quantity')); ?> </th>
+                                <th><?php echo e(trans('admin.category_name_of_product')); ?> </th>
                             </tr>
                             </tfoot>
                         </table>

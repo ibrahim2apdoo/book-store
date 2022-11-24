@@ -10,11 +10,11 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th> category name </th>
-                                <th>category description</th>
-                                <th>added by</th>
-                                <th> number of product </th>
-                                <th>category image</th>
+                                <th> <?php echo e(trans('admin.category_name')); ?> </th>
+                                <th><?php echo e(trans('admin.category_description')); ?></th>
+                                <th><?php echo e(trans('admin.added_by')); ?></th>
+                                <th><?php echo e(trans('admin.number_of_product')); ?>  </th>
+                                <th><?php echo e(trans('admin.category_image')); ?></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -32,10 +32,11 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>category description</th>
-                                <th>added by</th>
-                                <th> number of product </th>
-                                <th>category image</th>
+                                <th> <?php echo e(trans('admin.category_name')); ?> </th>
+                                <th><?php echo e(trans('admin.category_description')); ?></th>
+                                <th><?php echo e(trans('admin.added_by')); ?></th>
+                                <th><?php echo e(trans('admin.number_of_product')); ?>  </th>
+                                <th><?php echo e(trans('admin.category_image')); ?></th>
                             </tr>
                             </tfoot>
                         </table>
@@ -51,21 +52,20 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h1 style="text-align: center">products </h1>
+                        <h1 style="text-align: center"><?php echo e(trans('admin.products')); ?>  </h1>
                         <div>
                         </div>
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>delete </th>
-                                <th>edit </th>
-                                <th>name </th>
-                                <th>image </th>
-                                <th>description </th>
-                                <th>price </th>
-                                <th>quantity </th>
-                                <th>category name </th>
-
+                                <th> <?php echo e(trans('admin.delete')); ?> </th>
+                                <th> <?php echo e(trans('admin.edit')); ?> </th>
+                                <th> <?php echo e(trans('admin.category_name')); ?> </th>
+                                <th><?php echo e(trans('admin.category_image')); ?></th>
+                                <th><?php echo e(trans('admin.category_description')); ?></th>
+                                <th><?php echo e(trans('admin.price')); ?> </th>
+                                <th><?php echo e(trans('admin.quantity')); ?> </th>
+                                <th><?php echo e(trans('admin.category_name_of_product')); ?> </th>
                             </tr>
                             </thead>
                             <tbody>
@@ -97,14 +97,14 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>delete </th>
-                                <th>edit </th>
-                                <th>name </th>
-                                <th>image </th>
-                                <th>description </th>
-                                <th>price </th>
-                                <th>quantity </th>
-                                <th>category name </th>
+                                <th> <?php echo e(trans('admin.delete')); ?> </th>
+                                <th> <?php echo e(trans('admin.edit')); ?> </th>
+                                <th> <?php echo e(trans('admin.category_name')); ?> </th>
+                                <th><?php echo e(trans('admin.category_image')); ?></th>
+                                <th><?php echo e(trans('admin.category_description')); ?></th>
+                                <th><?php echo e(trans('admin.price')); ?> </th>
+                                <th><?php echo e(trans('admin.quantity')); ?> </th>
+                                <th><?php echo e(trans('admin.category_name_of_product')); ?> </th>
                             </tr>
                             </tfoot>
                         </table>
@@ -126,7 +126,7 @@
             <?php echo Form::open(['url'=>url('add_product/'.$categoryinfo->id),'files'=>true]); ?>
 
             <div class="form-group">
-                <?php echo Form::label('product_name'); ?>
+                <?php echo Form::label(trans('admin.product_name')); ?>
 
                 <?php echo Form::text('product_name',old('product_name'),['class'=>'form-control']); ?>
 
@@ -134,7 +134,7 @@
             <div class="form-group ">
                 <div class="row">
                     <div class="col-lg-12">
-                        <?php echo Form::label('product image'); ?>
+                        <?php echo Form::label(trans('admin.product_image')); ?>
 
                     </div>
                     <div class="col-lg-12">
@@ -144,25 +144,25 @@
                 </div>
             </div>
             <div class="form-group">
-                <?php echo Form::label('product description'); ?>
+                <?php echo Form::label(trans('admin.product_description')); ?>
 
                 <?php echo Form::text('product_description',old('product_description'),['class'=>'form-control']); ?>
 
             </div>
             <div class="form-group">
-                <?php echo Form::label('product price'); ?>
+                <?php echo Form::label(trans('admin.price')); ?>
 
                 <?php echo Form::text('product_price',old('product_price'),['class'=>'form-control']); ?>
 
             </div>
             <div class="form-group">
-                <?php echo Form::label('product quantity'); ?>
+                <?php echo Form::label(trans('admin.quantity')); ?>
 
                 <?php echo Form::text('product_quantity',old('product_quantity'),['class'=>'form-control']); ?>
 
             </div>
         </div>
-        <?php echo Form::submit('save',['class'=>'btn btn-primary form-control']); ?>
+        <?php echo Form::submit(trans('admin.save'),['class'=>'btn btn-primary form-control']); ?>
 
         <?php echo Form::close(); ?>
 

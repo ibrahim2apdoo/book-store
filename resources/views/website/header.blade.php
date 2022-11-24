@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @if(app()->getLocale() == "ar")
 
-    <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/style.css">
+
+
+        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/adminlteAr.min.css">
+        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/bootstrap-rtl.min.css">
+        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/rtl.css">
+        <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/styleAr.css">
+        <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/bootstrapAr.css">
+
+
+
+
+
+    @else
+        <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/style.css">
+    @endif
     <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/font-awesome.min.css">
 
 </head>
@@ -26,9 +40,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{url('/home')}}">Home</a></li>
-                <li><a href="{{url('about_us')}}">About Us</a></li>
-                <li><a href="{{url('contact')}}">Contact Us</a></li>
+                @if(auth()->user()->role=='admin')
+                    <li><a href="{{url('/adminpanel')}}">{{trans('admin.adminpanel')}}</a></li>
+                @endif
+                <li><a href="{{url('/home')}}">{{trans('admin.home')}}</a></li>
+                <li><a href="{{url('about_us')}}">{{trans('admin.about_us')}}</a></li>
+                <li><a href="{{url('contact')}}">{{trans('admin.Contact')}}</a></li>
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
@@ -38,13 +55,37 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            {{trans('admin.logout')}}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
                     </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ LaravelLocalization::getCurrentLocaleNative() }}
+                    </a>
+                    <div class="dropdown-menu dropdown dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-divider"></div>
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                <!-- Message Start -->
+                                <div class="media">
+                                    <div class="media-body">
+                                        <P class="dropdown-item-title">
+                                            <i class="fa fa-flag"></i>
+                                            {{ $properties['native'] }}
+                                        </P>
+
+                                    </div>
+                                </div>
+                                <!-- Message End -->
+                            </a>
+                        @endforeach
+                    </div>
+
                 </li>
             </ul>
         </div><!-- /.navbar-inverse -->

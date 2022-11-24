@@ -10,16 +10,16 @@
                             <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th> delete </th>
-                                <th> edit </th>
-                                <th> created at </th>
-                                <th> updated at </th>
-                                <th> category name </th>
-                                <th>category description</th>
-                                <th>added by</th>
-                                <th> number of product </th>
-                                <th>category image</th>
-                                <th>category id </th>
+                                <th> {{trans('admin.delete')}} </th>
+                                <th> {{trans('admin.edit')}} </th>
+                                <th>{{trans('admin.created_at')}}</th>
+                                <th>{{trans('admin.updated_at')}}</th>
+                                <th> {{trans('admin.category_name')}} </th>
+                                <th>{{trans('admin.category_description')}}</th>
+                                <th>{{trans('admin.added_by')}}</th>
+                                <th>{{trans('admin.number_of_product')}}  </th>
+                                <th>{{trans('admin.category_image')}}</th>
+                                <th>{{trans('admin.category_id')}} </th>
 
                             </tr>
                             </thead>
@@ -28,7 +28,7 @@
                                 <tr>
                                     <td>
                                         {!! Form::open(['id'=>'form_delete','url'=>url('category/'.$categoryinfo->id),'method'=>'delete']) !!}
-                                        {!! Form::submit('Delete',['class'=>'btn btn-danger fa fa-trash' ,'style'=>'inline']) !!}
+                                        {!! Form::submit(trans('admin.delete'),['class'=>'btn btn-danger fa fa-trash' ,'style'=>'inline']) !!}
                                         {!! Form::close() !!}
                                     </td>
                                     <td>
@@ -51,16 +51,16 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th> category name </th>
-                                <th> delete </th>
-                                <th> edit </th>
-                                <th> created at </th>
-                                <th> updated at </th>
-                                <th>category description</th>
-                                <th>added by</th>
-                                <th> number of product </th>
-                                <th>category image</th>
-                                <th>category id </th>
+                                <th> {{trans('admin.delete')}} </th>
+                                <th> {{trans('admin.edit')}} </th>
+                                <th>{{trans('admin.created_at')}}</th>
+                                <th>{{trans('admin.updated_at')}}</th>
+                                <th> {{trans('admin.category_name')}} </th>
+                                <th>{{trans('admin.category_description')}}</th>
+                                <th>{{trans('admin.added_by')}}</th>
+                                <th>{{trans('admin.number_of_product')}}  </th>
+                                <th>{{trans('admin.category_image')}}</th>
+                                <th>{{trans('admin.category_id')}} </th>
                             </tr>
                             </tfoot>
                         </table>

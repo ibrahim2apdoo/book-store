@@ -30,7 +30,7 @@
             <a href="{{url('')}}" class="nav-link {{request()->routeIs('category.*') ? 'active' : ''}}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Category
+                    {{trans('admin.category')}}
                     <i class="right fas fa-angle-left"></i>
                 </p>
             </a>
@@ -38,13 +38,13 @@
                 <li class="nav-item">
                     <a href="{{route('category.index')}}" class="nav-link {{request()->routeIs('category.index') ? 'active' : ''}}">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Category</p>
+                        <p>{{trans('admin.categories')}}</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{url('category/create')}}" class="nav-link {{request()->routeIs('category.create') ? 'active' : ''}}">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Add New Category</p>
+                        <p>{{trans('admin.category_add')}}</p>
                     </a>
                 </li>
 
@@ -55,7 +55,8 @@
             <a href="{{url('')}}" class="nav-link {{request()->routeIs('product.*') ? 'active' : ''}}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Product
+
+                    {{trans('admin.product')}}
                     <i class="right fas fa-angle-left"></i>
                 </p>
             </a>
@@ -63,13 +64,13 @@
                 <li class="nav-item">
                     <a href="{{route('product.index')}}" class="nav-link  {{request()->routeIs('product.index') ? 'active' : ''}}">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Product</p>
+                        <p>{{trans('admin.products')}}</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('product.create')}}" class="nav-link  {{request()->routeIs('product.create') ? 'active' : ''}}">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Add New Product</p>
+                        <p>{{trans('admin.product_add')}}</p>
                     </a>
                 </li>
 
@@ -80,7 +81,7 @@
             <a href="{{url('')}}" class="nav-link {{request()->routeIs('contact.*') ? 'active' : ''}}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Massages
+                    {{trans('admin.massage')}}
                     <i class="right fas fa-angle-left"></i>
                 </p>
             </a>
@@ -88,7 +89,7 @@
                 <li class="nav-item">
                     <a href="{{route('contact.showindex')}}" class="nav-link  {{request()->routeIs('contact.showindex') ? 'active' : ''}}">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Massages</p>
+                        <p>{{trans('admin.Massage')}}</p>
                     </a>
                 </li>
             </ul>

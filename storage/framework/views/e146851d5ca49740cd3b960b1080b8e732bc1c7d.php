@@ -33,7 +33,8 @@
             <a href="<?php echo e(url('')); ?>" class="nav-link <?php echo e(request()->routeIs('category.*') ? 'active' : ''); ?>">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Category
+                    <?php echo e(trans('admin.category')); ?>
+
                     <i class="right fas fa-angle-left"></i>
                 </p>
             </a>
@@ -41,13 +42,13 @@
                 <li class="nav-item">
                     <a href="<?php echo e(route('category.index')); ?>" class="nav-link <?php echo e(request()->routeIs('category.index') ? 'active' : ''); ?>">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Category</p>
+                        <p><?php echo e(trans('admin.categories')); ?></p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="<?php echo e(url('category/create')); ?>" class="nav-link <?php echo e(request()->routeIs('category.create') ? 'active' : ''); ?>">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Add New Category</p>
+                        <p><?php echo e(trans('admin.category_add')); ?></p>
                     </a>
                 </li>
 
@@ -58,7 +59,9 @@
             <a href="<?php echo e(url('')); ?>" class="nav-link <?php echo e(request()->routeIs('product.*') ? 'active' : ''); ?>">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Product
+
+                    <?php echo e(trans('admin.product')); ?>
+
                     <i class="right fas fa-angle-left"></i>
                 </p>
             </a>
@@ -66,13 +69,13 @@
                 <li class="nav-item">
                     <a href="<?php echo e(route('product.index')); ?>" class="nav-link  <?php echo e(request()->routeIs('product.index') ? 'active' : ''); ?>">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Product</p>
+                        <p><?php echo e(trans('admin.products')); ?></p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="<?php echo e(route('product.create')); ?>" class="nav-link  <?php echo e(request()->routeIs('product.create') ? 'active' : ''); ?>">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Add New Product</p>
+                        <p><?php echo e(trans('admin.product_add')); ?></p>
                     </a>
                 </li>
 
@@ -83,7 +86,8 @@
             <a href="<?php echo e(url('')); ?>" class="nav-link <?php echo e(request()->routeIs('contact.*') ? 'active' : ''); ?>">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Massages
+                    <?php echo e(trans('admin.massage')); ?>
+
                     <i class="right fas fa-angle-left"></i>
                 </p>
             </a>
@@ -91,7 +95,7 @@
                 <li class="nav-item">
                     <a href="<?php echo e(route('contact.showindex')); ?>" class="nav-link  <?php echo e(request()->routeIs('contact.showindex') ? 'active' : ''); ?>">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Massages</p>
+                        <p><?php echo e(trans('admin.Massage')); ?></p>
                     </a>
                 </li>
             </ul>

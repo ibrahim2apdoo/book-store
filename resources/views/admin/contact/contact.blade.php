@@ -7,7 +7,7 @@
     <div class="container">
         <section class="mb-4">
             <div class="col-md-9 mb-md-0 mb-5">
-                <h1 style="text-align: center"> Contact Us </h1>
+                <h1 style="text-align: center"> {{trans('admin.contact_us')}}</h1>
             </div>
             <!--Section heading-->
             <div class="row">

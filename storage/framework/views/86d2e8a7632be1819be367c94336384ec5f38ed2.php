@@ -8,16 +8,16 @@
                             <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th> delete </th>
-                                <th> edit </th>
-                                <th> created at </th>
-                                <th> updated at </th>
-                                <th> category name </th>
-                                <th>category description</th>
-                                <th>added by</th>
-                                <th> number of product </th>
-                                <th>category image</th>
-                                <th>category id </th>
+                                <th> <?php echo e(trans('admin.delete')); ?> </th>
+                                <th> <?php echo e(trans('admin.edit')); ?> </th>
+                                <th><?php echo e(trans('admin.created_at')); ?></th>
+                                <th><?php echo e(trans('admin.updated_at')); ?></th>
+                                <th> <?php echo e(trans('admin.category_name')); ?> </th>
+                                <th><?php echo e(trans('admin.category_description')); ?></th>
+                                <th><?php echo e(trans('admin.added_by')); ?></th>
+                                <th><?php echo e(trans('admin.number_of_product')); ?>  </th>
+                                <th><?php echo e(trans('admin.category_image')); ?></th>
+                                <th><?php echo e(trans('admin.category_id')); ?> </th>
 
                             </tr>
                             </thead>
@@ -27,7 +27,7 @@
                                     <td>
                                         <?php echo Form::open(['id'=>'form_delete','url'=>url('category/'.$categoryinfo->id),'method'=>'delete']); ?>
 
-                                        <?php echo Form::submit('Delete',['class'=>'btn btn-danger fa fa-trash' ,'style'=>'inline']); ?>
+                                        <?php echo Form::submit(trans('admin.delete'),['class'=>'btn btn-danger fa fa-trash' ,'style'=>'inline']); ?>
 
                                         <?php echo Form::close(); ?>
 
@@ -52,16 +52,16 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th> category name </th>
-                                <th> delete </th>
-                                <th> edit </th>
-                                <th> created at </th>
-                                <th> updated at </th>
-                                <th>category description</th>
-                                <th>added by</th>
-                                <th> number of product </th>
-                                <th>category image</th>
-                                <th>category id </th>
+                                <th> <?php echo e(trans('admin.delete')); ?> </th>
+                                <th> <?php echo e(trans('admin.edit')); ?> </th>
+                                <th><?php echo e(trans('admin.created_at')); ?></th>
+                                <th><?php echo e(trans('admin.updated_at')); ?></th>
+                                <th> <?php echo e(trans('admin.category_name')); ?> </th>
+                                <th><?php echo e(trans('admin.category_description')); ?></th>
+                                <th><?php echo e(trans('admin.added_by')); ?></th>
+                                <th><?php echo e(trans('admin.number_of_product')); ?>  </th>
+                                <th><?php echo e(trans('admin.category_image')); ?></th>
+                                <th><?php echo e(trans('admin.category_id')); ?> </th>
                             </tr>
                             </tfoot>
                         </table>
