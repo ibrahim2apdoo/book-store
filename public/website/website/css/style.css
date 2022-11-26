@@ -90,6 +90,10 @@ body{
 {
 	color: #ff8b38;
 }
+.font-bold{
+ font-weight: bold;
+    font-size: 20px;
+}
 .header form input[type="submit"]{
 	background-color: #17F3FC;
 	padding: 15px;
@@ -231,7 +235,6 @@ margin-bottom: 20px;
 .head-border:after{
 	content: '';
 	display: block;
-	width: 65px;
 	height: 5px;
 	border-radius: 3px;
 	margin: 10px 0px;
@@ -326,7 +329,7 @@ padding: 80px;
 .head-border-center:after{
 	content: '';
 	display: block;
-	width: 85px;
+	width: 200px;
 	height: 5px;
 	border-radius: 3px;
 	margin: 20px auto;
@@ -556,6 +559,8 @@ margin-top: 35px;
 
 .footer
 {
+    text-align: center;
+    height: auto;
     clear: both;
     margin-top: auto;
 	background-color:  #000;

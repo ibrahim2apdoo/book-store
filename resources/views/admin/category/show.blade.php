@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <div>
                         </div>
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="table table-bordered table-hover table-responsive">
                             <thead>
                             <tr>
                                 <th> {{trans('admin.category_name')}} </th>
@@ -57,7 +57,7 @@
                         <h1 style="text-align: center">{{trans('admin.products')}}  </h1>
                         <div>
                         </div>
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="table table-bordered table-hover table-responsive">
                             <thead>
                             <tr>
                                 <th> {{trans('admin.delete')}} </th>

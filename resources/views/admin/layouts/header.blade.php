@@ -7,12 +7,10 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{url('/')}}/design/adminlte/plugins/datatables/jquery.dataTables.js">
 
     @if(app()->getLocale() == "ar")
     {{--    Arabic styles here    --}}
 
-        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/adminlteAr.min.css">
         <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/adminlteAr.css">
         <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/bootstrap-rtl.min.css">
         <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/rtl.css">
@@ -56,4 +54,4 @@
     </script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+<div class="wrapper ">

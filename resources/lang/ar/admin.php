@@ -93,6 +93,10 @@ return [
     'Enter_Your_Name'=>'ادخل اسمك ',
     'products'=>'المنتجات',
     'ourOffice'=>'مكتبنا ',
+    'book_store'=>'متجر كتب',
+    'our_categories'=>'الفئات المتوفره لدينا ',
+    'Our_Product'=>'المنتجات المتوفره لدينا ',
+    'This_Category_Is_Empty'=>'لم يتم اضافه اي منتجات بعد',
 
 
 

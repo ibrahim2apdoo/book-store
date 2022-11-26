@@ -3,43 +3,35 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     @if(app()->getLocale() == "ar")
-
-
-
-        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/adminlteAr.min.css">
-        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/bootstrap-rtl.min.css">
-        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/rtl.css">
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/styleAr.css">
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/bootstrapAr.css">
-
-
-
-
-
     @else
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/style.css">
     @endif
     <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/font-awesome.min.css">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
 </head>
 <body>
-<!-- start nav bar-->
-<nav class="navbar navbar-inverse navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-inverse navbar-fixed-top shadow-sm navbar-expand-md">
     <div class="container">
+
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Axit" aria-expanded="false">
+
+        <a class="navbar-brand" href="{{url('/home')}}">{{$about->first()->siteName}}</a>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{url('/home')}}">{{$about->first()->siteName}}</a>
-        </div>
+
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav navbar-right ml-auto">
                 @if(auth()->user()->role=='admin')
                     <li><a href="{{url('/adminpanel')}}">{{trans('admin.adminpanel')}}</a></li>
                 @endif

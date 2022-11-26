@@ -99,6 +99,10 @@ return [
     'send'=>'Send',
     'products'=>'Products',
     'ourOffice'=>'Our Office',
+    'book_store'=>'Book Store',
+    'our_categories'=>'Our Categories',
+    'Our_Product'=>'Our Product',
+    'This_Category_Is_Empty'=>'This Category Is Empty',
 
 
 ];
