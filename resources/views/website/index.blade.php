@@ -5,10 +5,12 @@
         <div class="container">
             <div class="row center-vh">
                 <div class="col-md-12">
-                    <h1 class="uppercase">{{trans('admin.book_store')}}</h1>
+                    <div class="word-rtl">
+                    <h1 class="uppercase ">{{trans('admin.book_store')}}</h1>
                     <p class="uppercase">
                         {{$about->first()->sitDescription}}
                     </p>
+                    </div>
                 </div>
 
             </div>

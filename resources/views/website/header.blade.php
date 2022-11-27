@@ -4,7 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     @if(app()->getLocale() == "ar")
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/styleAr.css">
+        <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/wow.css">
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/bootstrapAr.css">
+
+        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/bootstrap-rtl.min.css">
+        <link rel="stylesheet" href="{{url('/')}}/design/adminlte/dist/css/rtl/rtl.css">
     @else
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/website/website/css/style.css">
@@ -19,9 +23,9 @@
     <div class="container">
 
         <!-- Brand and toggle get grouped for better mobile display -->
-
-        <a class="navbar-brand" href="{{url('/home')}}">{{$about->first()->siteName}}</a>
-
+<div class="logo" >
+        <a class="navbar-brand" href="{{url('/home')}}"><img class="image-logo" src="{{asset('storage/image/log1.png')}}"></a>
+</div>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -32,9 +36,6 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav navbar-right ml-auto">
-                @if(auth()->user()->role=='admin')
-                    <li><a href="{{url('/adminpanel')}}">{{trans('admin.adminpanel')}}</a></li>
-                @endif
                 <li><a href="{{url('/home')}}">{{trans('admin.home')}}</a></li>
                 <li><a href="{{url('about_us')}}">{{trans('admin.about_us')}}</a></li>
                 <li><a href="{{url('contact')}}">{{trans('admin.Contact')}}</a></li>

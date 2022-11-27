@@ -62,9 +62,9 @@ return [
     'code'=>'اختصار | رمز الدوله',
     'country_logo'=>'شعار الدوله',
     'about_us'=>'من نحن ',
-    'category'=>'الفئة',
+    'category'=>'القسم',
 
-    'categories'=>'الفئات',
+    'categories'=>'الاقسام',
 
     'category_add'=>'اضف فئة جديده',
     'product'=>'المنتج',
@@ -94,9 +94,10 @@ return [
     'products'=>'المنتجات',
     'ourOffice'=>'مكتبنا ',
     'book_store'=>'متجر كتب',
-    'our_categories'=>'الفئات المتوفره لدينا ',
+    'our_categories'=>'الاقسام المتوفره لدينا ',
     'Our_Product'=>'المنتجات المتوفره لدينا ',
     'This_Category_Is_Empty'=>'لم يتم اضافه اي منتجات بعد',
+    'total'=>'الاجمالي ',
 
 
 

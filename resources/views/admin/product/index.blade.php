@@ -4,7 +4,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            <div class="col-12">
+            <div class="col-lg-12 col-md-12 col-xm-12">
                 <div class="card">
                     <div class="card-body">
                         <div>
@@ -37,7 +37,7 @@
                                     <td>{{$productinfo->product_name}}</td>
                                     <td>
                                     @if(!empty($productinfo->product_image))
-                                        <img src="{{asset('storage/public/'.$productinfo->product_image)}}" style="width: 100px;height: 100px;">
+                                        <img src="{{asset('storage/'.$productinfo->product_image)}}" style="width: 100px;height: 100px;">
                                     @endif
                                     </td>
                                     <td>{{$productinfo->product_description}}</td>

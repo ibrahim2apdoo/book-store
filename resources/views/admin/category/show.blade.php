@@ -27,7 +27,7 @@
                                     <td>{{$categoryinfo->products()->count()}}</td>
                                     <td>
                                         @if(!empty($categoryinfo->category_image))
-                                            <img src="{{asset('storage/public/'.$categoryinfo->category_image)}}" style="width: 100px;height: 100px;">
+                                            <img src="{{asset('storage/'.$categoryinfo->category_image)}}" style="width: 100px;height: 100px;">
                                         @endif
                                     </td>
                                 </tr>
@@ -51,7 +51,7 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <div class="col-12">
+            <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="card-body">
                         <h1 style="text-align: center">{{trans('admin.products')}}  </h1>
@@ -84,7 +84,7 @@
                                     <td>{{$productinfo->product_name}}</td>
                                     <td>
                                         @if(!empty($productinfo->product_image))
-                                            <img src="{{asset('storage/public/'.$productinfo->product_image)}}" style="width: 100px;height: 100px;">
+                                            <img src="{{asset('storage/'.$productinfo->product_image)}}" style="width: 100px;height: 100px;">
                                         @endif
                                     </td>
                                     <td>{{$productinfo->product_description}}</td>
@@ -121,7 +121,7 @@
     </section>
     <div class="box">
         <div class="box-body ">
-            <div class="align-content-center"><h1 style="text-align: center">Add product</h1 st></div>
+            <div class="align-content-center"><h1 style="text-align: center">Add product</h1></div>
             {!! Form::open(['url'=>url('add_product/'.$categoryinfo->id),'files'=>true]) !!}
             <div class="form-group">
                 {!! Form::label(trans('admin.product_name')) !!}
