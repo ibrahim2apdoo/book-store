@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\category;
 use App\Http\Requests\ProductRequest;
 use App\product;
+use App\About_Us;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
@@ -93,5 +94,12 @@ class productController extends Controller
         $product->delete();
         session()->flash('success','product deleted successful');
         return redirect(url('product'));
+    }
+
+    public function show_product_details($id){
+        $product=product::find($id);
+        $about=About_Us::all();
+        $category =category::orderBy('id','desc')->paginate(3);
+        return view('website.show_product_details',compact('product','about','category'));
     }
 }

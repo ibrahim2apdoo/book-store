@@ -40,18 +40,6 @@
     <link rel="stylesheet" href="{{url('/')}}/design/adminlte/plugins/summernote/summernote-bs4.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-    <script type="text/javascript">
-        function check_all() {
-            $('input[class ="item_checkbox"]:checkbox').each(function () {
-                if($('input[class ="check_all"]:checkbox:checked').length==0){
-                    $(this).prop('checked',false);
-                }else{
-                    $(this).prop('checked',true);
-                }
-            });
-        }
-    </script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper ">

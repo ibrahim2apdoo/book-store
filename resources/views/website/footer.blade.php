@@ -48,15 +48,12 @@
                             <ul>
                                 <li>
                                     <a href="{{$about->first()->facebook}}"> <i class="fa fa-facebook"></i></a>
-
                                 </li>
                                 <li>
                                     <a href="{{$about->first()->tweeter}}">  <i class="fa fa-twitter" ></i></a>
-
                                 </li>
                                 <li>
                                     <a href="{{$about->first()->linkin}}">   <i class="fa fa-linkedin"></i></a>
-
                                 </li>
                             </ul>
                         </div>
@@ -65,7 +62,8 @@
 
             </div>
             <div class="row">
-                <div class="dash">
+
+                <div class="dash col-lg-12 col-12">
                      <div class="col-lg-12 col-md-12"><h3>&copy; Ibrahim <span> Abd El-Hafeez </span> 2022</h3> </div>
                 </div>
             </div>

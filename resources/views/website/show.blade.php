@@ -1,31 +1,20 @@
 @include('website.header')
  <!-- Main content -->
-    <section class="container" style="margin-top: 150px;">
+<section id="slider-sec" class="slider-sec parallax" style="background: url(https://megaone.acrothemes.com/book-shop/img/banner1.3.jpg) center 34.0188px / cover no-repeat fixed;">
+</section>
+<div class=" parallax">
+
+</div>
+    <section class="container">
+
         <div class="row">
             <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <table id="example2" class="table table-hover">
-                            <tbody>
-                            <tr>
-                                <td style="margin-top: 20px; width: 200px;">
-                                    <div  style="width: 200px ; height: 200px">
-                                        @if(!empty($categoryinfo->category_image))
-                                            <img src="{{asset('storage/'.$categoryinfo->category_image)}}" style="width: 100%;height: 100%;">
-                                        @endif
-                                    </div>
-                                </td>
-                                <td style="margin-top: 20px">
-                                    <div class="word-rtl">
-                                        <h1 class="uppercase" style="color: orangered;">{{$categoryinfo->category_name}}</h1>
-                                        <p>{{$categoryinfo->category_description}}</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                        <div class="word-rtl-category">
+                            <h1 class="uppercase" style="color: black;">{{trans('admin.Get_Ready_For_Checkout')}}</h1>
+                            <p>
+                                {{$categoryinfo->category_description}}
+                            </p>
+                        </div>
                 <!-- /.card -->
             </div>
             <!-- /.col -->
@@ -63,7 +52,9 @@
 
                     <div class="col-12 col-lg-10 mt-auto product-detail-cart-data">
                         <div class="media-body ml-lg-3">
-                            <h4 class="product-name"><a href="#">{{$productinfo->product_name}}</a></h4>
+                            <h4 class="product-name">
+                                <a class="uppercase " href="{{url('show_product_details/'.$productinfo->id)}}">{{$productinfo->product_name}} </a>
+                            </h4>
                             <p class="product-des">{{$productinfo->product_description}}</p>
                         </div>
                     </div>
@@ -80,7 +71,7 @@
         </div>
     </td>
     <td>
-        <h4 class="text-center amount">${{ $productinfo->product_price * $productinfo->product_quantity}}</h4>
+        <h4 class="text-center amount" >${{ $productinfo->product_price * $productinfo->product_quantity}}</h4>
     </td>
 </tr>
 @endforeach
@@ -89,8 +80,8 @@
 <div class="apply_coupon">
 <div class="row">
 <div class="col-12 text-left">
-    <a href="shop-cart.html" class="btn yellow-color-green-gradient-btn">UPDATE</a>
-    <a href="shop-cart.html" class="btn green-color-yellow-gradient-btn ">CHECKOUT</a>
+    <a href="#" class="btn yellow-color-green-gradient-btn">UPDATE</a>
+    <a href="#" class="btn green-color-yellow-gradient-btn ">CHECKOUT</a>
 </div>
 <!--                            <div class="col-6  coupon text-left">-->
 <!--                                <a href="shop-cart.html" class="btn pink-color-black-gradient-btn ">CHECKOUT</a>-->

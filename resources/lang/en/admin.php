@@ -104,6 +104,9 @@ return [
     'Our_Product'=>'Our Product',
     'This_Category_Is_Empty'=>'This Category Is Empty',
     'total'=>'Total',
+    'BEST_AVAILABLE'=>'BEST AVAILABLE',
+    'generalDescription'=>'Aenean imperdiet. Etiam ultricies nisi vel augue men tuhi spectrum alle me.',
+    'Get_Ready_For_Checkout'=>'Get Ready For Checkout?',
 
 
 ];

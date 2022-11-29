@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index(){
         $about=About_Us::all();
         $category=category::orderBy('id','desc')->paginate(3);
-        $product=product::all();
+        $product=product::orderBy('id','desc')->paginate(6);
         return view('website.index',compact('about','category','product'));
     }
     public function about_us(){

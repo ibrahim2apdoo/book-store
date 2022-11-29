@@ -29,6 +29,8 @@ Route::post('contact','ContactController@create')->middleware('auth');
 Route::get('/','HomeController@index');
 Route::get('/about_us','HomeController@about_us')->middleware('auth');
 Route::get('/show_product/{id}','categoryController@show_product')->middleware('auth');
+Route::get('/show_product_details/show_product/{id}','categoryController@show_product')->middleware('auth');
+Route::get('/show_product_details/{id}','productController@show_product_details')->middleware('auth');
 
 Route::middleware(['admin', 'web'])->group(function () {
         Route::get('/adminpanel', 'AdminController@index');

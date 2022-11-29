@@ -1,31 +1,21 @@
 <?php echo $__env->make('website.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
  <!-- Main content -->
-    <section class="container" style="margin-top: 150px;">
+<section id="slider-sec" class="slider-sec parallax" style="background: url(https://megaone.acrothemes.com/book-shop/img/banner1.3.jpg) center 34.0188px / cover no-repeat fixed;">
+</section>
+<div class=" parallax">
+
+</div>
+    <section class="container">
+
         <div class="row">
             <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <table id="example2" class="table table-hover">
-                            <tbody>
-                            <tr>
-                                <td style="margin-top: 20px; width: 200px;">
-                                    <div  style="width: 200px ; height: 200px">
-                                        <?php if(!empty($categoryinfo->category_image)): ?>
-                                            <img src="<?php echo e(asset('storage/'.$categoryinfo->category_image)); ?>" style="width: 100%;height: 100%;">
-                                        <?php endif; ?>
-                                    </div>
-                                </td>
-                                <td style="margin-top: 20px">
-                                    <div class="word-rtl">
-                                        <h1 class="uppercase" style="color: orangered;"><?php echo e($categoryinfo->category_name); ?></h1>
-                                        <p><?php echo e($categoryinfo->category_description); ?></p>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                        <div class="word-rtl-category">
+                            <h1 class="uppercase" style="color: black;"><?php echo e(trans('admin.Get_Ready_For_Checkout')); ?></h1>
+                            <p>
+                                <?php echo e($categoryinfo->category_description); ?>
+
+                            </p>
+                        </div>
                 <!-- /.card -->
             </div>
             <!-- /.col -->
@@ -63,7 +53,9 @@
 
                     <div class="col-12 col-lg-10 mt-auto product-detail-cart-data">
                         <div class="media-body ml-lg-3">
-                            <h4 class="product-name"><a href="#"><?php echo e($productinfo->product_name); ?></a></h4>
+                            <h4 class="product-name">
+                                <a class="uppercase " href="<?php echo e(url('show_product_details/'.$productinfo->id)); ?>"><?php echo e($productinfo->product_name); ?> </a>
+                            </h4>
                             <p class="product-des"><?php echo e($productinfo->product_description); ?></p>
                         </div>
                     </div>
@@ -76,11 +68,11 @@
     </td>
     <td class="text-center">
         <div class="quote text-center mt-1">
-            <input type="number" placeholder="1" class="quote" min="1" max="<?php echo e($productinfo->product_quantity); ?>">
+            <input type="number" placeholder="1" onclick="Calculate()" class="quote" min="1" max="<?php echo e($productinfo->product_quantity); ?>">
         </div>
     </td>
     <td>
-        <h4 class="text-center amount">$<?php echo e($productinfo->product_price * $productinfo->product_quantity); ?></h4>
+        <h4 class="text-center amount" >$<?php echo e($productinfo->product_price * $productinfo->product_quantity); ?></h4>
     </td>
 </tr>
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -89,8 +81,8 @@
 <div class="apply_coupon">
 <div class="row">
 <div class="col-12 text-left">
-    <a href="shop-cart.html" class="btn yellow-color-green-gradient-btn">UPDATE</a>
-    <a href="shop-cart.html" class="btn green-color-yellow-gradient-btn ">CHECKOUT</a>
+    <a href="#" class="btn yellow-color-green-gradient-btn">UPDATE</a>
+    <a href="#" class="btn green-color-yellow-gradient-btn ">CHECKOUT</a>
 </div>
 <!--                            <div class="col-6  coupon text-left">-->
 <!--                                <a href="shop-cart.html" class="btn pink-color-black-gradient-btn ">CHECKOUT</a>-->

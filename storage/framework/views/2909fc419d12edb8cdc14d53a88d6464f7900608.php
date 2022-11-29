@@ -4,9 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php if(app()->getLocale() == "ar"): ?>
         <link rel="stylesheet" type="text/css" href="<?php echo e(url('/')); ?>/website/website/css/styleAr.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo e(url('/')); ?>/website/website/css/wow.css">
         <link rel="stylesheet" type="text/css" href="<?php echo e(url('/')); ?>/website/website/css/bootstrapAr.css">
-
+        <link rel="stylesheet" type="text/css" href="<?php echo e(url('/')); ?>/website/website/css/wow.css">
         <link rel="stylesheet" href="<?php echo e(url('/')); ?>/design/adminlte/dist/css/rtl/bootstrap-rtl.min.css">
         <link rel="stylesheet" href="<?php echo e(url('/')); ?>/design/adminlte/dist/css/rtl/rtl.css">
     <?php else: ?>
@@ -15,7 +14,7 @@
     <?php endif; ?>
     <link rel="stylesheet" type="text/css" href="<?php echo e(url('/')); ?>/website/website/css/font-awesome.min.css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(url('/')); ?>/website/website/css/wow.css">
 
 </head>
 <body>
@@ -23,9 +22,9 @@
     <div class="container">
 
         <!-- Brand and toggle get grouped for better mobile display -->
-<div class="logo" >
-        <a class="navbar-brand" href="<?php echo e(url('/home')); ?>"><img class="image-logo" src="<?php echo e(asset('storage/image/log1.png')); ?>"></a>
-</div>
+            <div class="logo" >
+                    <a class="navbar-brand" href="<?php echo e(url('/home')); ?>"><img class="image-logo" src="<?php echo e(asset('storage/image/log1.png')); ?>"></a>
+            </div>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<?php echo e(__('Toggle navigation')); ?>">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>

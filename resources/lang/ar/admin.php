@@ -40,33 +40,19 @@ return [
     'level'=>'مستوي العضويه',
     'settings'=>'اعدادات الموقع',
     'save'=>'حفظ',
-    'sitename_en'=>'اسم الموقع بالانجليزي',
-    'logo'=>'شعار الموقع',
-    'icon'=>'ايقونه الموقع',
-    'main_lang'=>'اللغه الرئيسيه',
+
     'description'=>'الوصف',
     'keywords'=>'الكلمات الدلاليه',
     'status'=>'الحاله',
-    'massage_maintenance'=>'رساله الصيانه',
     'open'=>'مفتوح',
     'close'=>'مغلق',
-    'countries'=>'الدول',
-    'countries_add'=>'اضافه دوله',
-    'countries_edit'=>'تعديل الدوله',
-    'countries_added'=>' تم اضافه الدوله بنجاح',
-    'countries_updated'=>' تم التعديل علي الدوله بنجاح',
-    'countries_deleted'=>' تم حذف الدوله بنجاح',
-    'country_name_ar'=>' اسم الدوله بالعربي',
-    'country_name_en'=>'اسم الدوله بالانجليزي',
-    'mob'=>'كود الدوله',
-    'code'=>'اختصار | رمز الدوله',
-    'country_logo'=>'شعار الدوله',
+
     'about_us'=>'من نحن ',
     'category'=>'القسم',
 
     'categories'=>'الاقسام',
 
-    'category_add'=>'اضف فئة جديده',
+    'category_add'=>'اضف قسم جديده',
     'product'=>'المنتج',
     'product_add'=>'اضف منتج جديد',
     'massage'=>'الرسائل',
@@ -98,6 +84,8 @@ return [
     'Our_Product'=>'المنتجات المتوفره لدينا ',
     'This_Category_Is_Empty'=>'لم يتم اضافه اي منتجات بعد',
     'total'=>'الاجمالي ',
+    'BEST_AVAILABLE'=>'افضل ما لدينا ',
+    'Get_Ready_For_Checkout'=>'هل انت جاهز للدفع',
 
 
 
