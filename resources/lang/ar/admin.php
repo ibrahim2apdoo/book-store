@@ -35,7 +35,7 @@ return [
     'record_updated'=>' تم التعديل علي العضو بنجاح',
     'record_updated_setting'=>' تم التعديل علي اعدادات الموقع بنجاح',
     'record_deleted'=>' تم حذف العضو بنجاح',
-    'edit'=>'تعديل',
+    'update'=>'تعديل',
     'delete'=>'حذف',
     'level'=>'مستوي العضويه',
     'settings'=>'اعدادات الموقع',
